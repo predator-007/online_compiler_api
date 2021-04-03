@@ -5,10 +5,10 @@ const cors=require('cors');
 const { restart } = require('nodemon');
 const app=express();
 require('dotenv/config');
-Id1="6343f52e230389cc45a13f7574384ece";
-Secret1="21dc037131ca040bc48607944285899d4dd378cc5d4066ad998b04494e14723c";
-Id2="a8006db2c789e3c148683a4bf63f38aa";
-Secret2="454990529708473b2dcda5c36bbedd021373d18b50be7762c5c786dd977a8b22";
+Id1=process.env.Id1;
+Secret1=process.env.Secret1;
+Id2=process.env.Id2;
+Secret2=process.env.Secret2;
 app.use(bodyparser.json());
 app.use(cors());
 const checkCredit=(id,secret)=>{
