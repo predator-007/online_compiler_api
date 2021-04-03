@@ -4,6 +4,7 @@ const bodyparser=require('body-parser');
 const cors=require('cors');
 const { restart } = require('nodemon');
 const app=express();
+require('dotenv/config');
 Id1="6343f52e230389cc45a13f7574384ece";
 Secret1="21dc037131ca040bc48607944285899d4dd378cc5d4066ad998b04494e14723c";
 Id2="a8006db2c789e3c148683a4bf63f38aa";
@@ -111,4 +112,4 @@ app.post('/check',(req,res)=>{
 app.get('/',(req,res)=>{
     res.send("Working");
 });
-app.listen(5000);
+app.listen(process.env.PORT ||  5000);
